@@ -17,16 +17,6 @@ export async function generateMetadata() {
     description: "نتیجه سرچ سرویس",
   };
 }
-// ssr to ssg
-export function generateStaticParams() {
-  const router = useRouter();
-  const { zoneId, serviceId } = router.query;
-
-  return {
-    zoneId: zoneId.toString(),
-    serviceId: serviceId.toString(),
-  };
-}
 
 export default function ServicePage() {
   const router = useRouter();
