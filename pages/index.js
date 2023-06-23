@@ -1,5 +1,10 @@
-import Search from '@/src/Search'
+import Search from "@/src/Search";
 
-export default function Home() {
-  return <Search />
-}
+const Home = () => {
+  return (
+    <main className="flex flex-col items-center">
+      <Search />
+    </main>
+  );
+};
+export default Home;

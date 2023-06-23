@@ -4,7 +4,7 @@ import FullPageSearch from "./FullPageSearch";
 const FeaturefulSearch = () => {
   // const [inputValue, setInputValue] = useState("")
   // const [searchResults, setSearchResults] = useState([])
-  const [currentZone, setCurrentZone] = useState({zoneId: "", zoneName: ""})
+  const [currentZone, setCurrentZone] = useState({ zoneId: "", zoneName: "" });
   // const [enabledZones, setEnabledZones] = useState([])
 
   return (
@@ -24,7 +24,7 @@ const FeaturefulSearch = () => {
         setCurrentZone={setCurrentZone}
       />
     </>
-  )
-}
+  );
+};
 
 export default FeaturefulSearch;
