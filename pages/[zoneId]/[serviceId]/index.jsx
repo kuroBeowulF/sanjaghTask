@@ -2,7 +2,7 @@ import ServiceItems from "@/components/ServiceItems";
 import { getServiceData } from "@/lib/getServiceData";
 import { useRouter } from "next/router";
 
-export async function generateMetadata() {
+export function generateMetadata() {
   const router = useRouter();
   const { zoneId, serviceId } = router.query;
   const services = getServiceData(zoneId, serviceId);
@@ -17,6 +17,15 @@ export async function generateMetadata() {
     description: "نتیجه سرچ سرویس",
   };
 }
+
+// turn ssr to ssg if we could have every service data in a request api
+// export function generateStaticParams() {
+//   const services = getAllTheServices();
+//   return services.map((user) => {
+//     servicId: services.servicId.toString();
+//     zoneId: services.zoneId.toString();
+//   });
+// }
 
 export default function ServicePage() {
   const router = useRouter();
